@@ -1,5 +1,5 @@
 export default class MovieDbService {
-  12_apiBase = 'https://api.themoviedb.org/3/';
+  _apiBase = 'https://api.themoviedb.org/3/';
 
   _apiKey =
     'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMjk2NmI4OTE5NGUxNDMwZjgzNjM5MDMwMjJmOTI4YSIsInN1YiI6IjY1YTNlOTYyN2Q1ZjRiMDBjNWI3ZjM4MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N0cKRdVWDNAtF0ISWQW885FxUG3POQp6lVEOqO7cbeQ';
