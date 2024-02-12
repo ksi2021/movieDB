@@ -21,8 +21,7 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.js",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix",
-    "prepare": "husky"
+    "lint:fix": "eslint ./src --fix"
   },
   "eslintConfig": {
     "extends": [
