@@ -24,6 +24,8 @@ export default class CardList extends Component {
     ratedMovies: [],
     ratedPage: undefined,
     ratedTotalPages: undefined,
+    // tabs
+    tabsActiveKey: '1',
   };
 
   componentDidMount() {
@@ -158,6 +160,7 @@ export default class CardList extends Component {
 
   TabsChangeHandler = (key) => {
     if (key === '2') {
+      this.setState(({ tabsActiveKey }) => ({ tabsActiveKey: '2' }));
       try {
         this.movieService
           .getRatedMovies(this.state.guestSession.guest_session_id, this.state.ratedPage)
@@ -175,6 +178,8 @@ export default class CardList extends Component {
       } catch (error) {
         console.log(error, 196);
       }
+    } else {
+      this.setState(({ tabsActiveKey }) => ({ tabsActiveKey: '1' }));
     }
   };
 
@@ -215,7 +220,13 @@ export default class CardList extends Component {
     const _error = error ? <this.Error /> : null;
     const tabs =
       !isLoading && !error ? (
-        <Tabs centered indicator={{ size: 65 }} items={items} onChange={this.TabsChangeHandler} />
+        <Tabs
+          centered
+          indicator={{ size: 65 }}
+          items={items}
+          onChange={this.TabsChangeHandler}
+          activeKey={this.state.tabsActiveKey}
+        />
       ) : null;
     return (
       <MovieServiceProvider value={this.state.genres}>

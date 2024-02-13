@@ -37,17 +37,12 @@ export default class App extends React.Component {
       <Layout
         style={{
           width: '85%',
-
           marginLeft: 'auto',
           marginRight: 'auto',
           minHeight: '100vh',
         }}
       >
-        <Content
-          style={{
-            padding: '0 20px',
-          }}
-        >
+        <Content style={{ padding: '0 20px' }}>
           <CardList />
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>

@@ -6,6 +6,10 @@ import MoviePagination from '../pagination/pagination';
 import FilmCard from '../film-card/film-card';
 
 export default class SearchPage extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const { movies, page, totalPages } = this.props;
     if (!movies || !movies.length)
